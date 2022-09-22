@@ -11,6 +11,7 @@
   --eb-card-subtitle-font-size: #{var.$fs-xs};
   --eb-card-max-width: 18rem;
   --eb-card-link-hover: #{bs.$primary};
+  --eb-card-image-height: 12rem;
 
   max-width: var(--eb-card-max-width);
 
@@ -20,8 +21,9 @@
     }
   }
 
-  image {
-    border-radius: 0;
+  &__image {
+    object-fit: cover;
+    height: var(--eb-card-image-height);
   }
 
   &__subtitle {

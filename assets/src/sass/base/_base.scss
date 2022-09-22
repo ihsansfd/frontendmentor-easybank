@@ -28,6 +28,10 @@ body {
   overflow-x: hidden;
 }
 
+* {
+  transition: all 300ms ease-in;
+}
+
 a {
   text-decoration: none;
   &:hover {

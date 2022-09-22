@@ -10802,6 +10802,10 @@ body {
   overflow-x: hidden;
 }
 
+* {
+  transition: all 300ms ease-in;
+}
+
 a {
   text-decoration: none;
 }
@@ -10867,13 +10871,15 @@ body h6 {
   --eb-card-subtitle-font-size: 0.56rem;
   --eb-card-max-width: 18rem;
   --eb-card-link-hover: hsl(136deg, 65%, 51%);
+  --eb-card-image-height: 12rem;
   max-width: var(--eb-card-max-width);
 }
 .cb-card a :hover {
   color: var(--eb-card-link-hover);
 }
-.cb-card image {
-  border-radius: 0;
+.cb-card__image {
+  object-fit: cover;
+  height: var(--eb-card-image-height);
 }
 .cb-card__subtitle {
   font-size: var(--eb-card-subtitle-font-size);
