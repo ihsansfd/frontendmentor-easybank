@@ -1,0 +1,21 @@
+/**
+ * Basic typography style for copy text
+ */
+
+@use "../custom/custom_bootstrap" as bs;
+@use "../abstracts/variables" as var;
+
+body {
+  font-size: bs.$font-size-root;
+  font-family: bs.$font-family-sans-serif;
+  color: var.$font-color-root;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var.$heading-color;
+  }
+}

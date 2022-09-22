@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+// No need to import vendors folder as it'll be included in custom folder
+
+@use "./custom";
+
+@use "./abstracts";
+
+@use "./base";
+
+@use "./components";
+
+@use "./layout";
+
+@use "./pages";

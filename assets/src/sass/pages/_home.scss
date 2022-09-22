@@ -1,0 +1,155 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts/variables" as var;
+@use "../custom/custom_bootstrap" as bs;
+
+.hero {
+  background-color: var.$very-light-gray;
+  padding-bottom: 9.4rem;
+  position: relative;
+
+  @include bs.media-breakpoint-up(lg) {
+    padding-top: 10rem;
+  }
+
+  &__container {
+    display: block;
+    @include bs.media-breakpoint-up(lg) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__text-wrapper {
+    max-width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    @include bs.media-breakpoint-up(lg) {
+      width: 45%;
+      margin-left: unset;
+      margin-right: unset;
+    }
+  }
+  &__text {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: min(25rem, 100%);
+    @include bs.media-breakpoint-up(lg) {
+      margin-left: unset;
+      margin-right: unset;
+    }
+  }
+
+  &__bg-wrapper {
+    min-height: 16rem;
+    margin-bottom: 1.5rem;
+    width: 100vw;
+    overflow-y: hidden;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    @include bs.media-breakpoint-up(lg) {
+      width: 55%;
+      position: static;
+      min-height: unset;
+      overflow-y: unset;
+      transform: unset;
+      margin-bottom: unset;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+
+    &--intro {
+      display: none;
+      z-index: 2;
+
+      @include bs.media-breakpoint-up(lg) {
+        display: block;
+      }
+      top: 0;
+      right: 0;
+      object-fit: contain;
+      object-position: center;
+      width: 85%;
+      max-width: 80rem;
+      transform: translate(35%, -25%);
+    }
+
+    &--intro-mobile {
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -15%);
+      display: block;
+      width: 100%;
+      z-index: 1;
+
+      @include bs.media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+
+    &--phone {
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -29%);
+      width: 90%;
+      z-index: 2;
+
+      @include bs.media-breakpoint-up(sm) {
+        width: 70%;
+      }
+
+      @include bs.media-breakpoint-up(md) {
+        width: 50%;
+      }
+      @include bs.media-breakpoint-up(lg) {
+        display: block;
+        right: 0;
+        width: 50%;
+        max-width: 55rem;
+        object-fit: contain;
+        object-position: center;
+        transform: translate(17.5%, -13%);
+      }
+    }
+  }
+}
+
+.home-section {
+  padding-top: 6.38rem;
+  padding-bottom: 6.38rem;
+
+  &__text {
+    max-width: 36rem;
+  }
+}
+
+.home-section-1 {
+  background-color: var.$light-grayish-blue;
+
+  &__feature-icon {
+    margin-left: auto;
+    margin-right: auto;
+    @include bs.media-breakpoint-up(lg) {
+      margin-left: initial;
+      margin-right: initial;
+    }
+  }
+  &__feature-description {
+    font-size: var.$fs-small;
+  }
+}
+
+.home-section-2 {
+  background-color: var.$very-light-gray;
+  .row {
+    & > * {
+      max-width: max-content;
+    }
+  }
+}

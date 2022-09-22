@@ -1,0 +1,17 @@
+{
+  "name": "huddle-landing-page-with-alternating-feature-blocks-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Huddle landing page with alternating feature blocks coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass assets/src/sass/main.scss:assets/build/css/main.css --watch",
+    "minify:webpack": "webpack --config webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.11",
+    "bootstrap": "^5.2.1",
+    "sass": "^1.54.9"
+  }
+}

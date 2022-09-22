@@ -1,0 +1,42 @@
+@use "../abstracts/variables" as var;
+@use "../custom/custom_bootstrap" as bs;
+
+.cb-card {
+  --bs-card-border-radius: 0;
+  --bs-card-border-width: 0;
+  --bs-card-spacer-y: 1.8rem;
+  --bs-card-spacer-x: 1.4rem;
+  --eb-card-title-font-size: 1rem;
+  --eb-card-text-font-size: #{var.$fs-small};
+  --eb-card-subtitle-font-size: #{var.$fs-xs};
+  --eb-card-max-width: 18rem;
+  --eb-card-link-hover: #{bs.$primary};
+
+  max-width: var(--eb-card-max-width);
+
+  a {
+    :hover {
+      color: var(--eb-card-link-hover);
+    }
+  }
+
+  image {
+    border-radius: 0;
+  }
+
+  &__subtitle {
+    font-size: var(--eb-card-subtitle-font-size);
+  }
+
+  &__title {
+    font-size: var(--eb-card-title-font-size);
+  }
+
+  &__text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: var(--eb-card-text-font-size);
+  }
+}

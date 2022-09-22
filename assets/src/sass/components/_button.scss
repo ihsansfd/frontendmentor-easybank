@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+@use "../custom/custom_bootstrap" as bs;
+@use "../abstracts/variables" as var;
+@use "sass:color";
+
+.eb-btn {
+  --bs-btn-color: #{bs.$white};
+  --bs-btn-border-radius: #{bs.$border-radius-pill};
+  --bs-btn-padding-x: 1.6rem;
+  --bs-btn-padding-y: 0.5rem;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-hover-color: var(--bs-btn-color);
+  --bs-btn-active-color: var(--bs-btn-color);
+  --eb-btn-background-image: var(--eb-primary-gradient);
+  background-image: var(--eb-btn-background-image);
+  font-size: var.$fs-small;
+  &:hover {
+    background-image: linear-gradient(
+      to right,
+      color.scale(bs.$primary, $lightness: 40%),
+      color.scale(bs.$secondary, $lightness: 40%)
+    );
+  }
+}

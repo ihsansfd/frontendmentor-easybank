@@ -1,0 +1,72 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "../custom/custom_bootstrap" as bs;
+
+.site-footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: var.$dark-blue;
+
+  font-size: var.$fs-small;
+
+  a {
+    color: var.$very-light-gray;
+    text-decoration: none;
+
+    &:hover {
+      color: bs.$primary;
+    }
+  }
+
+  &__column {
+    & > * {
+      @include bs.media-breakpoint-down(md) {
+        max-width: max-content;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+    }
+    &:last-child {
+      & > * {
+        @include bs.media-breakpoint-up(xl) {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  &__social-media-link {
+    &:not(:last-child) {
+      display: inline-block;
+      margin-right: 0.4rem;
+    }
+
+    &:hover {
+      .site-footer__social-media-icon {
+        color: bs.$primary !important;
+      }
+    }
+  }
+
+  &__menu-items {
+    text-align: center;
+    max-width: max-content;
+    // border: 5px solid red;
+
+    @include mix.list-style-reset;
+
+    @include bs.media-breakpoint-up(md) {
+      text-align: start;
+    }
+  }
+
+  &__menu-item {
+    &:not(:last-child) {
+      margin-bottom: 0.6rem;
+    }
+  }
+}

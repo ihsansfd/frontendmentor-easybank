@@ -1,0 +1,64 @@
+@use "sass:map";
+
+// ######## Custom variables #########
+
+$dark-blue: hsl(233, 26%, 24%);
+$lime-green: hsl(136, 65%, 51%);
+$bright-cyan: hsl(192, 70%, 51%);
+
+$grayish-blue: hsl(233, 8%, 62%);
+$light-grayish-blue: hsl(220, 16%, 96%);
+$very-light-gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+$font-size-root: 18px;
+$font-family: "Public Sans", sans-serif;
+
+$heading-color: $dark-blue;
+
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 700;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+
+$font-size-base: 1rem;
+$font-color-root: $grayish-blue;
+
+$h1-font-size: $font-size-base * 2.45;
+$h2-font-size: $font-size-base * 1.77;
+$h3-font-size: $font-size-base * 1.3;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+$fs-xs: 0.56rem;
+$fs-very-small: 0.78rem;
+$fs-small: 0.8rem;
+$fs-large: 1.12rem;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// ######### Custom properties ##########
+
+:root {
+  --hd-breakpoint-xs: #{map-get($grid-breakpoints, xs)};
+  --hd-breakpint-sm: #{map-get($grid-breakpoints, sm)};
+  --hd-breakpoint-md: #{map-get($grid-breakpoints, md)};
+  --hd-breakpoint-lg: #{map-get($grid-breakpoints, lg)};
+  --hd-breakpint-xl: #{map-get($grid-breakpoints, xl)};
+  --hd-breakpint-xxl: #{map-get($grid-breakpoints, xxl)};
+}
+
+// ######## Base URL #########
+// for development as the absolute path can be different with the server
+
+$base-url: "https://ihsansfd.github.io/frontendmentor-easybank";

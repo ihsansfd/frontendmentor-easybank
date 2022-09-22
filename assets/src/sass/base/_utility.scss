@@ -1,0 +1,15 @@
+@use "../custom/custom_bootstrap" as bs;
+
+:root {
+  --eb-primary-gradient: linear-gradient(
+    to right,
+    #{bs.$primary},
+    #{bs.$secondary}
+  );
+}
+
+.container {
+  @include bs.media-breakpoint-down(sm) {
+    max-width: 95%;
+  }
+}
