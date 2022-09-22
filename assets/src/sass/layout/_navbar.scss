@@ -30,7 +30,7 @@
     transition: background-image 300ms ease-in;
   }
 
-  &__collapse.show {
+  &__collapse {
     @include bs.media-breakpoint-down(lg) {
       position: absolute;
       z-index: 3;

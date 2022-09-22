@@ -10922,7 +10922,7 @@ body h6 {
   transition: background-image 300ms ease-in;
 }
 @media (max-width: 991.98px) {
-  .site-navbar__collapse.show {
+  .site-navbar__collapse {
     position: absolute;
     z-index: 3;
     background-color: var(--eb-navbar-collapse-mobile-bg);
