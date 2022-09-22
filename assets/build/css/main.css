@@ -10802,12 +10802,9 @@ body {
   overflow-x: hidden;
 }
 
-* {
-  transition: all 300ms ease-in;
-}
-
 a {
   text-decoration: none;
+  transition: all 300ms ease-in-out;
 }
 a:hover {
   color: hsl(136deg, 65%, 51%);
@@ -10874,6 +10871,9 @@ body h6 {
   --eb-card-image-height: 12rem;
   max-width: var(--eb-card-max-width);
 }
+.cb-card a {
+  transition: all 300ms ease-in-out;
+}
 .cb-card a :hover {
   color: var(--eb-card-link-hover);
 }
@@ -10936,6 +10936,7 @@ body h6 {
 .site-navbar__link {
   position: relative;
   color: var(--eb-navbar-mobile-nav-link-color);
+  transition: all 300ms ease-in-out;
 }
 @media (min-width: 992px) {
   .site-navbar__link {
@@ -10977,6 +10978,7 @@ body h6 {
 .site-footer a {
   color: hsl(0deg, 0%, 98%);
   text-decoration: none;
+  transition: all 300ms ease-in-out;
 }
 .site-footer a:hover {
   color: hsl(136deg, 65%, 51%);

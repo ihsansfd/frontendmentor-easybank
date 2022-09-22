@@ -50,6 +50,7 @@
     position: relative;
 
     color: var(--eb-navbar-mobile-nav-link-color);
+    transition: var.$main-transition;
 
     @include bs.media-breakpoint-up(lg) {
       color: inherit;

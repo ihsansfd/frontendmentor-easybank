@@ -7,6 +7,7 @@
  */
 
 @use "../custom/custom_bootstrap" as bs;
+@use "../abstracts/variables" as var;
 
 html {
   box-sizing: border-box;
@@ -28,12 +29,10 @@ body {
   overflow-x: hidden;
 }
 
-* {
-  transition: all 300ms ease-in;
-}
-
 a {
   text-decoration: none;
+  transition: var.$main-transition;
+
   &:hover {
     color: bs.$primary;
   }
