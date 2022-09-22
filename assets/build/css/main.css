@@ -10904,10 +10904,10 @@ body h6 {
   position: relative;
 }
 .site-navbar__toggler {
-  --bs-navbar-toggler-icon-bg: url("/assets/build/images/icon-close.svg");
+  --bs-navbar-toggler-icon-bg: url("https://ihsansfd.github.io/frontendmentor-easybank/assets/build/images/icon-close.svg");
 }
 .site-navbar__toggler.collapsed {
-  --bs-navbar-toggler-icon-bg: url("/assets/build/images/icon-hamburger.svg");
+  --bs-navbar-toggler-icon-bg: url("https://ihsansfd.github.io/frontendmentor-easybank/assets/build/images/icon-hamburger.svg");
 }
 .site-navbar__toggler-icon {
   transition: background-image 300ms ease-in;
