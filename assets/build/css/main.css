@@ -10872,7 +10872,10 @@ body h6 {
   max-width: var(--eb-card-max-width);
 }
 .cb-card a {
-  transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out !important;
+}
+.cb-card a > * {
+  transition: all 300ms ease-in-out !important;
 }
 .cb-card a :hover {
   color: var(--eb-card-link-hover);

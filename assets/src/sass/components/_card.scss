@@ -16,7 +16,11 @@
   max-width: var(--eb-card-max-width);
 
   a {
-    transition: var.$main-transition;
+    transition: var.$main-transition !important;
+
+    & > * {
+      transition: var.$main-transition !important;
+    }
 
     :hover {
       color: var(--eb-card-link-hover);
