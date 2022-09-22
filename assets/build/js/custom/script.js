@@ -3,9 +3,9 @@ const bodyShadowed = document.querySelector("#body-shadowed");
 const breakpointlg = getComputedStyle(
   document.documentElement
 ).getPropertyValue("--hd-breakpoint-lg");
-const isMobileNav = window.matchMedia(`(max-width: ${breakpointlg})`).matches;
 
 navbarCollapse.addEventListener("shown.bs.collapse", (event) => {
+  const isMobileNav = window.matchMedia(`(max-width: ${breakpointlg})`).matches;
   if (isMobileNav) bodyShadowed.style.display = "block";
 });
 
